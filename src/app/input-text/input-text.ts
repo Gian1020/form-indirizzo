@@ -1,8 +1,9 @@
 import { Component, EventEmitter, input, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-input-text',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './input-text.html',
   styleUrl: './input-text.css'
 })
@@ -10,7 +11,7 @@ export class InputText {
   input:string="";
   @Output() stringa =new EventEmitter<string>();
 
-  inviaValore(event: any){
-    this.stringa.emit(event);
+  inviaValore(){
+    this.stringa.emit(this.input);
   }
 }
