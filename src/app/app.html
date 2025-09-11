@@ -1,8 +1,8 @@
 <div style="display: flex; align-items: center; justify-content: center; gap: 5px; flex-direction: column;">
     <label for="nome">Nome</label>
-    <app-input-text id="nome" (input) = "nome"></app-input-text>
+    <app-input-text id="nome" (stringa) = "nome = $event"></app-input-text>
     <label for="cognome">Cognome</label>
-    <app-input-text id="cognome" (input) = "cognome"></app-input-text>
+    <app-input-text id="cognome" (stringa) = "cognome = $event"></app-input-text>
     <app-indirizzo></app-indirizzo>
     
 </div>

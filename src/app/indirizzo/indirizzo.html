@@ -1,6 +1,23 @@
-<!-- <select name="regione" id="">
-    @for(regione of data.regioni; track regione){
-        <option value=""></option>
+<div style="display: flex; flex-wrap: wrap; flex-direction: column; gap:7px;">
+<select name="regione" id="" (change)="caricaProvince($event)">
+    <option value="" disabled hidden>Regione</option>
+    @for(regione of regioni; track regione){
+        <option value="{{regione.nome}}">{{regione.nome}}</option>
+    }
+</select>
+
+<select name="provincie" id="" (change)="caricaComuni($event)">
+    <option value="" disabled hidden>Provincie</option>
+    @for(province of province;track province.nome){
+        <option value="{{province.nome}}">{{province.nome}}</option>
+    }
+</select> 
+
+<select name="comuni">
+    <option value="" disabled hidden>Comuni</option>
+    @for(comune of comuni;track comune.nome){
+        <option value="{{comune.nome}}">{{comune.nome}}</option>
     }
 
-</select> -->
+</select>
+</div>
